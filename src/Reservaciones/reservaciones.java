@@ -45,7 +45,7 @@ public class reservaciones {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-
+ 
     public void setCliente(clientes cliente) {
         this.cliente = cliente;
     }

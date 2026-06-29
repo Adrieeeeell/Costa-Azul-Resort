@@ -17,7 +17,7 @@ public class clientes {
     private LocalDate fecha;
     private String telefono;
     private String correo;
-    private Enum procedencia;
+    private Nacionalidad Nacionalidad;
     private int edad;
 
     public String getId() {
@@ -40,8 +40,8 @@ public class clientes {
         return correo;
     }
 
-    public Enum getProcedencia() {
-        return procedencia;
+    public Nacionalidad getNacionalidad() {
+        return Nacionalidad;
     }
 
     public void setFecha(LocalDate fecha) {
@@ -55,17 +55,17 @@ public class clientes {
 }
        
 
-    public clientes(String id, String nombre, LocalDate fecha, String telefono, String correo,Enum procedencia) {
+    public clientes(String id, String nombre, LocalDate fecha, String telefono, String correo,Nacionalidad nacionalidad) {
         this.id = id;
         this.nombre = nombre;
         this.fecha = fecha;
         this.telefono = telefono;
         this.correo = correo;
-         this.procedencia=procedencia;
+         this.Nacionalidad=nacionalidad;
     }
     @Override
     public String toString() {
-        return "clientes" +"id:"+ id + " nombre:" + nombre + ", edad:" + this.edad+ " telefono:" + telefono + ", correo;" + correo + " procedencia:" + procedencia;
+        return "clientes" +"id:"+ id + " nombre:" + nombre + ", edad:" + this.edad+ " telefono:" + telefono + ", correo;" + correo + " procedencia:" + Nacionalidad;
     }
     
 }

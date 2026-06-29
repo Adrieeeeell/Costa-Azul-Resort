@@ -8,6 +8,6 @@ package Clientes;
  *
  * @author Student
  */
-public enum Enum {
+public enum Nacionalidad {
     Nacional,Internacional;
 }
