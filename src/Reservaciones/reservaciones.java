@@ -64,7 +64,7 @@ public class reservaciones {
         if (this.isEstado() == false){
         System.out.println("Pendiente");
     }
-        return true;
+        return estado;
 }
 public String toString() {
         return "reservaciones{" + "alojamiento=" + alojamiento + ", cliente=" + cliente + ", fingreso=" + fingreso + ", fsalida=" + fsalida + ", estado=" + estado + "Total de noches" + this.calcularNoches(fingreso) + '}';
