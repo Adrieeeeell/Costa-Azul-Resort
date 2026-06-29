@@ -9,11 +9,11 @@ package Alojamientos;
  * @author Student
  */
 public abstract class Alojamiento {
-    private int codigo;
-    private String nombre;
-    private int capacidadMaxima;
-    private int precioPorNoche;
-    private boolean disponible;
+    protected int codigo;
+    protected String nombre;
+    protected int capacidadMaxima;
+    protected int precioPorNoche;
+    protected boolean disponible;
 
     public Alojamiento(int codigo, String nombre, int capacidadMaxima, int precioPorNoche, boolean disponible) {
         this.codigo = codigo;
