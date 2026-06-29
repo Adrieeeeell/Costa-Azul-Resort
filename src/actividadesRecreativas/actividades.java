@@ -9,5 +9,5 @@ package actividadesRecreativas;
  * @author Student
  */
 public enum actividades {
-        'caminatas', 'clases de cocina','recorridos turisticos';
+        caminatas, claseCocina,recorridosTuristicos;
 }
