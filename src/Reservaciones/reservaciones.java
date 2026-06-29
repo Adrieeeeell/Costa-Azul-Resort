@@ -20,6 +20,7 @@ public class reservaciones {
     private LocalDate fingreso;
     private LocalDate fsalida;
     private boolean estado;
+    private int totalnoches;
 
     public Alojamiento getAlojamiento() {
         return alojamiento;
@@ -45,6 +46,10 @@ public class reservaciones {
         this.estado = estado;
     }
 
+    public void setCliente(clientes cliente) {
+        this.cliente = cliente;
+    }
+
     public reservaciones(Alojamiento alojamiento, clientes cliente, LocalDate fingreso, LocalDate fsalida, boolean estado) {
         this.alojamiento = alojamiento;
         this.cliente = cliente;
@@ -54,7 +59,9 @@ public class reservaciones {
     }
 
     public int calcularNoches(LocalDate fingreso) {
-        return Period.between(fingreso, LocalDate.now()).getDays();
+       Period.between(fingreso, LocalDate.now()).getDays();{
+    }
+       return totalnoches;
     }
 
     public boolean verificarEstado() {
@@ -66,7 +73,8 @@ public class reservaciones {
     }
         return estado;
 }
-public String toString() {
-        return "reservaciones{" + "alojamiento=" + alojamiento + ", cliente=" + cliente + ", fingreso=" + fingreso + ", fsalida=" + fsalida + ", estado=" + estado + "Total de noches" + this.calcularNoches(fingreso) + '}';
+    @Override
+    public String toString() {
+        return "reservaciones{" + "alojamiento=" + alojamiento + ", cliente=" + cliente + ", fingreso=" + fingreso + ", fsalida=" + fsalida + ", estado=" + estado + "Total de noches" + this.totalnoches+ '}';
     }
 }

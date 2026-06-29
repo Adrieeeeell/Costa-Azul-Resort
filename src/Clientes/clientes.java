@@ -18,6 +18,7 @@ public class clientes {
     private String telefono;
     private String correo;
     private Enum procedencia;
+    private int edad;
 
     public String getId() {
         return id;
@@ -45,10 +46,14 @@ public class clientes {
 
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
+        
     }
     public int CalcularEdad(LocalDate fecha){
-       return Period.between(fecha,LocalDate.now()).getYears();}
-    
+       Period.between(fecha,LocalDate.now()).getYears();{
+    }
+       return edad;
+}
+       
 
     public clientes(String id, String nombre, LocalDate fecha, String telefono, String correo,Enum procedencia) {
         this.id = id;
@@ -60,7 +65,7 @@ public class clientes {
     }
     @Override
     public String toString() {
-        return "clientes" +"id:"+ id + " nombre:" + nombre + ", fecha:" + this.CalcularEdad(fecha)+ " telefono:" + telefono + ", correo;" + correo + " procedencia:" + procedencia;
+        return "clientes" +"id:"+ id + " nombre:" + nombre + ", edad:" + this.edad+ " telefono:" + telefono + ", correo;" + correo + " procedencia:" + procedencia;
     }
     
 }
